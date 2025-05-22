@@ -77,13 +77,13 @@ const Navbar = ({
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="ghost"
-                    className="relative h-10 w-10 rounded-full"
+                    className="relative h-10 w-10 rounded-full p-0 flex items-center justify-center"
                   >
                     {user?.avatar ? (
                       <img
                         src={user.avatar}
                         alt={user.name}
-                        className="h-10 w-10 rounded-full object-cover"
+                        className="h-10 w-10 rounded-full object-cover border-2 border-purple-500"
                       />
                     ) : (
                       <User className="h-6 w-6 text-restaurant-primary" />
