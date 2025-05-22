@@ -62,6 +62,12 @@ const Navbar = ({
             >
               Restaurantes
             </Link>
+            <Link
+              to="/planos"
+              className="text-gray-700 hover:text-restaurant-primary"
+            >
+              Planos
+            </Link>
           </div>
 
           {/* Auth Buttons */}
@@ -140,7 +146,7 @@ const Navbar = ({
               size="icon"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
-              <Menu />
+              <Menu className="h-6 w-6" />
             </Button>
           </div>
         </div>
@@ -171,6 +177,13 @@ const Navbar = ({
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Restaurantes
+              </Link>
+              <Link
+                to="/planos"
+                className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-100"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Planos
               </Link>
 
               {isAuthenticated ? (

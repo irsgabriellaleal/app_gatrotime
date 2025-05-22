@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -16,6 +15,9 @@ import AdminDashboardPage from "@/pages/AdminDashboardPage";
 import LoginPage from "@/pages/LoginPage";
 import RegisterPage from "@/pages/RegisterPage";
 import NotFound from "./pages/NotFound";
+import { Pricing } from "@/pages/Pricing";
+import { CheckoutPage } from "@/pages/CheckoutPage";
+import RestaurantCalendarPage from "@/pages/RestaurantCalendarPage";
 
 const queryClient = new QueryClient();
 
@@ -30,13 +32,25 @@ const App = () => (
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/restaurantes" element={<RestaurantsPage />} />
-              <Route path="/restaurante/:id" element={<RestaurantDetailPage />} />
+              <Route
+                path="/restaurante/:id"
+                element={<RestaurantDetailPage />}
+              />
               <Route path="/minhas-reservas" element={<MyReservationsPage />} />
               <Route path="/perfil" element={<ProfilePage />} />
-              <Route path="/meu-restaurante/criar" element={<CreateRestaurantPage />} />
+              <Route
+                path="/meu-restaurante/criar"
+                element={<CreateRestaurantPage />}
+              />
               <Route path="/admin/dashboard" element={<AdminDashboardPage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/cadastro" element={<RegisterPage />} />
+              <Route path="/planos" element={<Pricing />} />
+              <Route path="/checkout/:planId" element={<CheckoutPage />} />
+              <Route
+                path="/meu-restaurante/calendario"
+                element={<RestaurantCalendarPage />}
+              />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>
